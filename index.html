@@ -11,13 +11,12 @@
       --deep: #061f3b;
       --accent: #ffc21a;
       --bg: #eef5fb;
-      --card: #ffffff;
       --text: #0c2b4b;
       --muted: #64758a;
       --line: #d9e6f3;
       --green: #16845f;
       --red: #d93255;
-      --shadow: 0 14px 34px rgba(6, 34, 63, .14);
+      --shadow: 0 14px 34px rgba(6,34,63,.14);
     }
     * { box-sizing: border-box; }
     html { scroll-behavior: smooth; }
@@ -50,7 +49,7 @@
     .bottom-item.date b { font-size: 20px; line-height: 1.05; letter-spacing: -.4px; }
     .bottom-divider { width: 1px; height: 58px; background: rgba(6,55,99,.35); }
 
-    /* COMMON */
+    /* SECTIONS */
     .section { padding: 18px 15px 0; }
     .section-title { margin: 0 0 12px; font-size: 22px; line-height: 1.08; color: var(--deep); letter-spacing: -.5px; font-weight: 900; text-align: center; }
     .section-sub { margin: -4px auto 14px; max-width: 350px; color: var(--muted); text-align: center; font-size: 14px; line-height: 1.35; font-weight: 600; }
@@ -61,6 +60,8 @@
     .value-card .emoji { width: 40px; height: 40px; border-radius: 12px; background: #fff4c9; display: grid; place-items: center; font-size: 22px; margin-bottom: 9px; }
     .value-card b { display: block; font-size: 14px; line-height: 1.18; color: var(--blue); margin-bottom: 5px; }
     .value-card p { margin: 0; font-size: 12px; line-height: 1.28; color: var(--muted); font-weight: 600; }
+
+    /* ROUTE */
     .route-box { padding: 16px 16px 4px; }
     .route-point { position: relative; display: grid; grid-template-columns: 42px 1fr; min-height: 88px; }
     .route-point::before { content: ''; position: absolute; left: 17px; top: 31px; bottom: -4px; width: 2px; background: linear-gradient(180deg, #1d78b8, rgba(29,120,184,.12)); }
@@ -72,12 +73,16 @@
     .route-day { margin-bottom: 4px; font-size: 11px; letter-spacing: 2px; text-transform: uppercase; color: #7b7fa2; font-weight: 900; }
     .route-info h3 { margin: 0 0 5px; color: #111632; font-size: 21px; line-height: 1.05; font-weight: 900; }
     .route-info p { margin: 0; color: #747699; font-size: 13px; line-height: 1.35; font-weight: 600; }
+
+    /* WHY */
     .why-card { padding: 16px; background: radial-gradient(circle at 100% 0%, rgba(255,194,26,.22), transparent 34%), linear-gradient(135deg, #063763, #021c36); color: #fff; }
     .why-list { display: grid; gap: 11px; margin-top: 12px; }
     .why-item { display: grid; grid-template-columns: 28px 1fr; gap: 9px; align-items: start; }
     .check { width: 28px; height: 28px; border-radius: 50%; display: grid; place-items: center; background: var(--accent); color: var(--blue); font-weight: 900; }
     .why-item b { display: block; font-size: 14px; line-height: 1.2; margin-bottom: 2px; }
     .why-item span { display: block; font-size: 12px; line-height: 1.3; color: rgba(255,255,255,.78); font-weight: 600; }
+
+    /* INCLUDED */
     .included-grid { display: grid; gap: 12px; }
     .list-card { padding: 16px; }
     .list-card h3 { margin: 0 0 12px; font-size: 18px; text-transform: uppercase; }
@@ -86,6 +91,8 @@
     ul.clean { list-style: none; padding: 0; margin: 0; display: grid; gap: 9px; font-size: 13px; line-height: 1.25; font-weight: 700; }
     .included li::before { content: '✓'; color: var(--green); font-weight: 900; margin-right: 8px; }
     .excluded li::before { content: '×'; color: var(--red); font-weight: 900; margin-right: 8px; }
+
+    /* PRICES */
     .price-hero { padding: 16px; text-align: center; margin-bottom: 12px; background: linear-gradient(135deg, #fff8dc, #fff); }
     .price-hero small { display: block; color: var(--muted); font-size: 12px; font-weight: 800; margin-bottom: 4px; }
     .price-hero b { display: block; color: var(--blue); font-size: 31px; line-height: 1; font-weight: 900; }
@@ -96,6 +103,8 @@
     .prices td { padding: 7px 4px; border-top: 1px solid var(--line); text-align: center; font-weight: 700; }
     .prices td:first-child, .prices th:first-child { text-align: left; padding-left: 8px; }
     .note { margin: 8px 2px 0; color: var(--muted); font-size: 11px; line-height: 1.35; font-weight: 600; }
+
+    /* CTA */
     .cta { margin-top: 20px; padding: 20px 15px 24px; background: radial-gradient(circle at 100% 0%, rgba(255,194,26,.26), transparent 30%), linear-gradient(135deg, #063763, #021c36); color: #fff; border-radius: 28px 28px 0 0; }
     .cta h2 { margin: 0; font-size: 25px; line-height: 1.05; letter-spacing: -.5px; text-transform: uppercase; }
     .cta h2 span { display: block; color: var(--accent); }
@@ -104,18 +113,24 @@
     .lead-card h3 { margin: 0 0 4px; color: var(--blue); text-align: center; text-transform: uppercase; font-size: 18px; }
     .lead-card p { margin: 0 0 11px; color: var(--muted); text-align: center; font-size: 12px; }
     .fields { display: grid; grid-template-columns: 1fr 1fr; gap: 8px; margin-bottom: 10px; }
-    input { width: 100%; border: 1px solid #d9e3ed; border-radius: 999px; padding: 12px 13px; font-size: 14px; outline: none; }
+    input { width: 100%; border: 1px solid #d9e3ed; border-radius: 999px; padding: 12px 13px; font-size: 14px; outline: none; font-family: inherit; }
     input:focus { border-color: var(--accent); box-shadow: 0 0 0 3px rgba(255,194,26,.22); }
     input.error { border-color: var(--red); }
-    button, .cta-button { width: 100%; border: 0; border-radius: 999px; padding: 14px 18px; background: linear-gradient(180deg, #ffd54b, var(--accent)); color: var(--blue); font-weight: 900; font-size: 15px; text-transform: uppercase; box-shadow: 0 10px 20px rgba(255,194,26,.28); cursor: pointer; text-decoration: none; display: block; text-align: center; }
+    button { width: 100%; border: 0; border-radius: 999px; padding: 14px 18px; background: linear-gradient(180deg, #ffd54b, var(--accent)); color: var(--blue); font-weight: 900; font-size: 15px; text-transform: uppercase; box-shadow: 0 10px 20px rgba(255,194,26,.28); cursor: pointer; font-family: inherit; }
+    button:disabled { opacity: .6; cursor: not-allowed; }
     .privacy { margin-top: 8px; text-align: center; font-size: 10px; color: var(--muted); }
-    .sticky-cta { position: fixed; z-index: 99; left: 50%; bottom: calc(12px + env(safe-area-inset-bottom)); transform: translateX(-50%); width: min(398px, calc(100% - 28px)); display: grid; grid-template-columns: 1fr auto; align-items: center; gap: 10px; background: rgba(255,255,255,.96); backdrop-filter: blur(10px); border: 1px solid rgba(217,230,243,.85); box-shadow: 0 12px 30px rgba(0,0,0,.18); border-radius: 999px; padding: 9px 10px 9px 15px; }
-    .sticky-cta b { font-size: 12px; line-height: 1.2; color: var(--blue); }
-    .sticky-cta a { text-decoration: none; background: var(--accent); color: var(--blue); border-radius: 999px; padding: 11px 14px; font-size: 12px; font-weight: 900; white-space: nowrap; }
+
+    /* SUCCESS */
     .success-msg { display: none; text-align: center; padding: 16px 0 8px; }
     .success-msg .icon { font-size: 48px; margin-bottom: 8px; }
     .success-msg h3 { color: var(--green); font-size: 20px; margin: 0 0 6px; }
     .success-msg p { color: var(--muted); font-size: 14px; margin: 0; }
+
+    /* STICKY */
+    .sticky-cta { position: fixed; z-index: 99; left: 50%; bottom: calc(12px + env(safe-area-inset-bottom)); transform: translateX(-50%); width: min(398px, calc(100% - 28px)); display: grid; grid-template-columns: 1fr auto; align-items: center; gap: 10px; background: rgba(255,255,255,.96); backdrop-filter: blur(10px); border: 1px solid rgba(217,230,243,.85); box-shadow: 0 12px 30px rgba(0,0,0,.18); border-radius: 999px; padding: 9px 10px 9px 15px; }
+    .sticky-cta b { font-size: 12px; line-height: 1.2; color: var(--blue); }
+    .sticky-cta a { text-decoration: none; background: var(--accent); color: var(--blue); border-radius: 999px; padding: 11px 14px; font-size: 12px; font-weight: 900; white-space: nowrap; }
+
     @media (max-width: 370px) {
       .hero { min-height: 650px; }
       .hero h1 { font-size: 29px; }
@@ -132,210 +147,244 @@
   </style>
 </head>
 <body>
-  <main class="app">
-    <header class="hero">
-      <div class="logo">Тур<span>Бонжур</span><small>travel family</small></div>
-      <div class="hero-content">
-        <h1>Атлантика. Вулкани.<br>Вічне літо.</h1>
-        <div class="subtitle">І ти — в центрі всього дійства</div>
-        <div class="offer">Круїз 4 Канарських острови + Мадейра</div>
+<main class="app">
+
+  <!-- HERO -->
+  <header class="hero">
+    <div class="logo">Тур<span>Бонжур</span><small>travel family</small></div>
+    <div class="hero-content">
+      <h1>Атлантика. Вулкани.<br>Вічне літо.</h1>
+      <div class="subtitle">І ти — в центрі всього дійства</div>
+      <div class="offer">Круїз 4 Канарських острови + Мадейра</div>
+    </div>
+    <div class="top-features">
+      <div class="top-feature">
+        <div class="icon">🌴</div>
+        <p>2 дні<br>на Тенеріфе</p>
       </div>
-      <div class="top-features">
-        <div class="top-feature">
-          <div class="icon">🌴</div>
-          <p>2 дні<br>на Тенеріфе</p>
-        </div>
-        <div class="vertical-line"></div>
-        <div class="top-feature">
-          <div class="icon">👥</div>
-          <p>Українська група<br>з представником<br>ТурБонжур</p>
-        </div>
-        <div class="vertical-line"></div>
-        <div class="top-feature">
-          <div class="icon">🇺🇦</div>
-          <p>Екскурсії на островах<br>з українським гідом</p>
-        </div>
+      <div class="vertical-line"></div>
+      <div class="top-feature">
+        <div class="icon">👥</div>
+        <p>Українська група<br>з представником<br>ТурБонжур</p>
       </div>
-      <div class="hero-bottom-card">
-        <div class="bottom-item">
-          <div class="bottom-icon">✈️</div>
-          <b>Вильоти з будь якого<br>міста Європи</b>
+      <div class="vertical-line"></div>
+      <div class="top-feature">
+        <div class="icon">🇺🇦</div>
+        <p>Екскурсії на островах<br>з українським гідом</p>
+      </div>
+    </div>
+    <div class="hero-bottom-card">
+      <div class="bottom-item">
+        <div class="bottom-icon">✈️</div>
+        <b>Вильоти з будь якого<br>міста Європи</b>
+      </div>
+      <div class="bottom-divider"></div>
+      <div class="bottom-item date">
+        <div class="bottom-icon">📅</div>
+        <b>22–29 листопада<br>2026</b>
+      </div>
+    </div>
+  </header>
+
+  <!-- ЩО ОТРИМАЄШ -->
+  <section class="section">
+    <div class="accent-chip">🔥 преміальний груповий круїз</div>
+    <h2 class="section-title">Що ти отримаєш за 8 днів?</h2>
+    <p class="section-sub">Один маршрут — одразу Канари, Мадейра, океан, лайнер Costa Smeralda і супровід ТурБонжур.</p>
+    <div class="value-grid">
+      <div class="value-card premium-card"><div class="emoji">🌴</div><b>4 Канарські острови</b><p>Тенеріфе, Фуертевентура, Лансароте, Гран-Канарія.</p></div>
+      <div class="value-card premium-card"><div class="emoji">🌿</div><b>Мадейра</b><p>Фуншал, зелена природа, океанські панорами.</p></div>
+      <div class="value-card premium-card"><div class="emoji">🚢</div><b>Costa Smeralda</b><p>Комфортний лайнер, ресторани, шоу та розваги.</p></div>
+      <div class="value-card premium-card"><div class="emoji">🇺🇦</div><b>Українська група</b><p>Супровід представника ТурБонжур у подорожі.</p></div>
+    </div>
+  </section>
+
+  <!-- МАРШРУТ -->
+  <section class="section">
+    <h2 class="section-title">Маршрут круїзу</h2>
+    <p class="section-sub">Кожен день — новий острів, нові краєвиди і відчуття вічного літа.</p>
+    <div class="route-box premium-card">
+      <div class="route-point gold"><div class="route-dot"></div><div class="route-info"><div class="route-day">Дні 1–2</div><h3>Тенеріфе</h3><p>Посадка на лайнер, 2 дні на острові, Санта-Крус-де-Тенеріфе.</p></div></div>
+      <div class="route-point"><div class="route-dot"></div><div class="route-info"><div class="route-day">День 3</div><h3>Фуертевентура</h3><p>Пляжі, океан, легкий острівний вайб і простір Атлантики.</p></div></div>
+      <div class="route-point gold"><div class="route-dot"></div><div class="route-info"><div class="route-day">День 4</div><h3>Лансароте</h3><p>Вулканічні пейзажі, незвична природа та марсіанські ландшафти.</p></div></div>
+      <div class="route-point"><div class="route-dot"></div><div class="route-info"><div class="route-day">День 5</div><h3>Гран-Канарія</h3><p>Лас-Пальмас, набережні, місто, пляжі та краєвиди острова.</p></div></div>
+      <div class="route-point"><div class="route-dot"></div><div class="route-info"><div class="route-day">День 6</div><h3>Мадейра</h3><p>Фуншал, зелена природа, океанські панорами та атмосфера Португалії.</p></div></div>
+      <div class="route-point gold"><div class="route-dot"></div><div class="route-info"><div class="route-day">День 7</div><h3>В морі</h3><p>День на лайнері: відпочинок, шоу, ресторани та інфраструктура Costa Smeralda.</p></div></div>
+      <div class="route-point gold last"><div class="route-dot"></div><div class="route-info"><div class="route-day">День 8</div><h3>Тенеріфе</h3><p>Повернення в Санта-Крус-де-Тенеріфе та завершення круїзу.</p></div></div>
+    </div>
+  </section>
+
+  <!-- ЧОМУ -->
+  <section class="section">
+    <div class="why-card premium-card">
+      <div class="accent-chip">чому з ТурБонжур</div>
+      <h2 class="section-title" style="color:#fff;text-align:left;margin-bottom:0;">Не треба збирати все самостійно</h2>
+      <div class="why-list">
+        <div class="why-item"><div class="check">✓</div><div><b>Маршрут уже продуманий</b><span>Круїз, виліт, каюта, деталі — все зібрано в один зрозумілий продукт.</span></div></div>
+        <div class="why-item"><div class="check">✓</div><div><b>Є супровід представника</b><span>Підтримка до подорожі та під час круїзу.</span></div></div>
+        <div class="why-item"><div class="check">✓</div><div><b>Вильоти з різних міст Європи</b><span>Підберемо найзручніший варіант під твоє місто.</span></div></div>
+        <div class="why-item"><div class="check">✓</div><div><b>Можна додати екскурсії</b><span>На островах доступні екскурсії з українським гідом.</span></div></div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ВКЛЮЧЕНО -->
+  <section class="section">
+    <div class="included-grid">
+      <div class="list-card included premium-card">
+        <h3>Що включено:</h3>
+        <ul class="clean">
+          <li>авіапереліт</li>
+          <li>проживання на лайнері Costa Smeralda</li>
+          <li>повний пансіон на борту</li>
+          <li>шоу, розваги та інфраструктура лайнера</li>
+          <li>супровід представника ТурБонжур</li>
+        </ul>
+      </div>
+      <div class="list-card excluded premium-card">
+        <h3>Що не включено:</h3>
+        <ul class="clean">
+          <li>трансфер</li>
+          <li>екскурсії в портах з українським гідом</li>
+          <li>сервісний збір: 154 EUR за двох</li>
+        </ul>
+      </div>
+    </div>
+  </section>
+
+  <!-- ЦІНИ -->
+  <section class="section" id="price">
+    <h2 class="section-title">Вартість круїзу</h2>
+    <p class="section-sub">Ціна за двох дорослих. Підберемо виліт, каюту і місто старту під твій бюджет.</p>
+    <div class="price-hero premium-card">
+      <small>стартова вартість за двох</small>
+      <b>від 1 243 €</b>
+      <span>з вильотом з міст Європи</span>
+    </div>
+    <div class="prices premium-card">
+      <table>
+        <thead><tr><th>Місто</th><th>Внутрішня</th><th>Вікно</th><th>Балкон</th></tr></thead>
+        <tbody>
+          <tr><td>🇮🇪 Дублін</td><td>1 377 €</td><td>1 602 €</td><td>1 662 €</td></tr>
+          <tr><td>🇵🇱 Катовіце</td><td>1 496 €</td><td>1 721 €</td><td>1 781 €</td></tr>
+          <tr><td>🇲🇩 Кишинів</td><td>1 650 €</td><td>1 875 €</td><td>1 935 €</td></tr>
+          <tr><td>🇦🇹 Відень</td><td>1 793 €</td><td>2 018 €</td><td>2 078 €</td></tr>
+          <tr><td>🇩🇪 Берлін</td><td>1 631 €</td><td>1 856 €</td><td>1 916 €</td></tr>
+          <tr><td>🇭🇺 Будапешт</td><td>1 421 €</td><td>1 646 €</td><td>1 706 €</td></tr>
+          <tr><td>🇨🇿 Прага</td><td>1 923 €</td><td>2 148 €</td><td>2 208 €</td></tr>
+          <tr><td>🇫🇷 Париж</td><td>1 325 €</td><td>1 550 €</td><td>1 610 €</td></tr>
+          <tr><td>🇳🇱 Амстердам</td><td>1 673 €</td><td>1 898 €</td><td>1 958 €</td></tr>
+          <tr><td>🇩🇰 Копенгаген</td><td>2 023 €</td><td>2 248 €</td><td>2 308 €</td></tr>
+          <tr><td>🇪🇸 Мадрид</td><td>1 250 €</td><td>1 475 €</td><td>1 535 €</td></tr>
+          <tr><td>🇪🇸 Барселона</td><td>1 319 €</td><td>1 544 €</td><td>1 604 €</td></tr>
+          <tr><td>🇪🇸 Валенсія</td><td>1 243 €</td><td>1 468 €</td><td>1 528 €</td></tr>
+        </tbody>
+      </table>
+    </div>
+    <p class="note">Вартість вказана в EUR. Кількість місць обмежена. Актуальну ціну уточнюйте у менеджера.</p>
+  </section>
+
+  <!-- CTA / ФОРМА -->
+  <section class="cta" id="details">
+    <h2>Хочеш на Канари <span>в листопаді?</span></h2>
+    <p>Залиш контакти — підберемо найзручніший виліт і каюту під твій бюджет.</p>
+    <div class="lead-card">
+      <h3>Підібрати варіант</h3>
+      <p>Менеджер ТурБонжур звʼяжеться з тобою та надішле деталі.</p>
+      <div id="formBlock">
+        <div class="fields">
+          <input id="name" type="text" placeholder="Імʼя" autocomplete="name" />
+          <input id="phone" type="tel" placeholder="Телефон" autocomplete="tel" />
         </div>
-        <div class="bottom-divider"></div>
-        <div class="bottom-item date">
-          <div class="bottom-icon">📅</div>
-          <b>22–29 листопада<br>2026</b>
-        </div>
+        <button id="submitBtn" onclick="sendLead()">ПІДІБРАТИ ВАРІАНТ</button>
+        <div class="privacy">Ми не передаємо ваші дані третім особам</div>
       </div>
-    </header>
-
-    <section class="section">
-      <div class="accent-chip">🔥 преміальний груповий круїз</div>
-      <h2 class="section-title">Що ти отримаєш за 8 днів?</h2>
-      <p class="section-sub">Один маршрут — одразу Канари, Мадейра, океан, лайнер Costa Smeralda і супровід ТурБонжур.</p>
-      <div class="value-grid">
-        <div class="value-card premium-card"><div class="emoji">🌴</div><b>4 Канарські острови</b><p>Тенеріфе, Фуертевентура, Лансароте, Гран-Канарія.</p></div>
-        <div class="value-card premium-card"><div class="emoji">🌿</div><b>Мадейра</b><p>Фуншал, зелена природа, океанські панорами.</p></div>
-        <div class="value-card premium-card"><div class="emoji">🚢</div><b>Costa Smeralda</b><p>Комфортний лайнер, ресторани, шоу та розваги.</p></div>
-        <div class="value-card premium-card"><div class="emoji">🇺🇦</div><b>Українська група</b><p>Супровід представника ТурБонжур у подорожі.</p></div>
+      <div class="success-msg" id="successMsg">
+        <div class="icon">🎉</div>
+        <h3>Заявку прийнято!</h3>
+        <p>Менеджер ТурБонжур звʼяжеться з вами найближчим часом. Канари вже чекають! 🌴</p>
       </div>
-    </section>
+    </div>
+  </section>
 
-    <section class="section">
-      <h2 class="section-title">Маршрут круїзу</h2>
-      <p class="section-sub">Кожен день — новий острів, нові краєвиди і відчуття вічного літа.</p>
-      <div class="route-box premium-card">
-        <div class="route-point gold"><div class="route-dot"></div><div class="route-info"><div class="route-day">Дні 1–2</div><h3>Тенеріфе</h3><p>Посадка на лайнер, 2 дні на острові, Санта-Крус-де-Тенеріфе.</p></div></div>
-        <div class="route-point"><div class="route-dot"></div><div class="route-info"><div class="route-day">День 3</div><h3>Фуертевентура</h3><p>Пляжі, океан, легкий острівний вайб і простір Атлантики.</p></div></div>
-        <div class="route-point gold"><div class="route-dot"></div><div class="route-info"><div class="route-day">День 4</div><h3>Лансароте</h3><p>Вулканічні пейзажі, незвична природа та марсіанські ландшафти.</p></div></div>
-        <div class="route-point"><div class="route-dot"></div><div class="route-info"><div class="route-day">День 5</div><h3>Гран-Канарія</h3><p>Лас-Пальмас, набережні, місто, пляжі та краєвиди острова.</p></div></div>
-        <div class="route-point"><div class="route-dot"></div><div class="route-info"><div class="route-day">День 6</div><h3>Мадейра</h3><p>Фуншал, зелена природа, океанські панорами та атмосфера Португалії.</p></div></div>
-        <div class="route-point gold"><div class="route-dot"></div><div class="route-info"><div class="route-day">День 7</div><h3>В морі</h3><p>День на лайнері: відпочинок, шоу, ресторани та інфраструктура Costa Smeralda.</p></div></div>
-        <div class="route-point gold last"><div class="route-dot"></div><div class="route-info"><div class="route-day">День 8</div><h3>Тенеріфе</h3><p>Повернення в Санта-Крус-де-Тенеріфе та завершення круїзу.</p></div></div>
-      </div>
-    </section>
+</main>
 
-    <section class="section">
-      <div class="why-card premium-card">
-        <div class="accent-chip">чому з ТурБонжур</div>
-        <h2 class="section-title" style="color:#fff;text-align:left;margin-bottom:0;">Не треба збирати все самостійно</h2>
-        <div class="why-list">
-          <div class="why-item"><div class="check">✓</div><div><b>Маршрут уже продуманий</b><span>Круїз, виліт, каюта, деталі — все зібрано в один зрозумілий продукт.</span></div></div>
-          <div class="why-item"><div class="check">✓</div><div><b>Є супровід представника</b><span>Підтримка до подорожі та під час круїзу.</span></div></div>
-          <div class="why-item"><div class="check">✓</div><div><b>Вильоти з різних міст Європи</b><span>Підберемо найзручніший варіант під твоє місто.</span></div></div>
-          <div class="why-item"><div class="check">✓</div><div><b>Можна додати екскурсії</b><span>На островах доступні екскурсії з українським гідом.</span></div></div>
-        </div>
-      </div>
-    </section>
+<!-- STICKY CTA -->
+<div class="sticky-cta">
+  <b>Канари + Мадейра<br>22–29 листопада</b>
+  <a href="#details">Залишити заявку</a>
+</div>
 
-    <section class="section">
-      <div class="included-grid">
-        <div class="list-card included premium-card">
-          <h3>Що включено:</h3>
-          <ul class="clean">
-            <li>авіапереліт</li>
-            <li>проживання на лайнері Costa Smeralda</li>
-            <li>повний пансіон на борту</li>
-            <li>шоу, розваги та інфраструктура лайнера</li>
-            <li>супровід представника ТурБонжур</li>
-          </ul>
-        </div>
-        <div class="list-card excluded premium-card">
-          <h3>Що не включено:</h3>
-          <ul class="clean">
-            <li>трансфер</li>
-            <li>екскурсії в портах з українським гідом</li>
-            <li>сервісний збір: 154 EUR за двох</li>
-          </ul>
-        </div>
-      </div>
-    </section>
+<script>
+  // Ініціалізація Telegram WebApp
+  const tg = window.Telegram?.WebApp;
+  if (tg) {
+    tg.ready();
+    tg.expand();
+  }
 
-    <section class="section" id="price">
-      <h2 class="section-title">Вартість круїзу</h2>
-      <p class="section-sub">Ціна вказана за двох дорослих. Підберемо виліт, каюту і місто старту під твій бюджет.</p>
-      <div class="price-hero premium-card">
-        <small>стартова вартість за двох</small>
-        <b>від 1 243 €</b>
-        <span>з вильотом з міст Європи</span>
-      </div>
-      <div class="prices premium-card">
-        <table>
-          <thead><tr><th>Місто</th><th>Внутрішня</th><th>Вікно</th><th>Балкон</th></tr></thead>
-          <tbody>
-            <tr><td>🇮🇪 Дублін</td><td>1 377 €</td><td>1 602 €</td><td>1 662 €</td></tr>
-            <tr><td>🇵🇱 Катовіце</td><td>1 496 €</td><td>1 721 €</td><td>1 781 €</td></tr>
-            <tr><td>🇲🇩 Кишинів</td><td>1 650 €</td><td>1 875 €</td><td>1 935 €</td></tr>
-            <tr><td>🇦🇹 Відень</td><td>1 793 €</td><td>2 018 €</td><td>2 078 €</td></tr>
-            <tr><td>🇩🇪 Берлін</td><td>1 631 €</td><td>1 856 €</td><td>1 916 €</td></tr>
-            <tr><td>🇭🇺 Будапешт</td><td>1 421 €</td><td>1 646 €</td><td>1 706 €</td></tr>
-            <tr><td>🇨🇿 Прага</td><td>1 923 €</td><td>2 148 €</td><td>2 208 €</td></tr>
-            <tr><td>🇫🇷 Париж</td><td>1 325 €</td><td>1 550 €</td><td>1 610 €</td></tr>
-            <tr><td>🇳🇱 Амстердам</td><td>1 673 €</td><td>1 898 €</td><td>1 958 €</td></tr>
-            <tr><td>🇩🇰 Копенгаген</td><td>2 023 €</td><td>2 248 €</td><td>2 308 €</td></tr>
-            <tr><td>🇪🇸 Мадрид</td><td>1 250 €</td><td>1 475 €</td><td>1 535 €</td></tr>
-            <tr><td>🇪🇸 Барселона</td><td>1 319 €</td><td>1 544 €</td><td>1 604 €</td></tr>
-            <tr><td>🇪🇸 Валенсія</td><td>1 243 €</td><td>1 468 €</td><td>1 528 €</td></tr>
-          </tbody>
-        </table>
-      </div>
-      <p class="note">Вартість вказана в EUR. Кількість місць обмежена. Актуальну ціну уточнюйте у менеджера.</p>
+  // Автозаповнення імені з Telegram профілю
+  if (tg?.initDataUnsafe?.user) {
+    const u = tg.initDataUnsafe.user;
+    const fullName = [u.first_name, u.last_name].filter(Boolean).join(' ');
+    if (fullName) document.getElementById('name').value = fullName;
+  }
 
-    </section>
+  // Відправка ліда напряму в Telegram API
+  function sendLead() {
+    const nameEl = document.getElementById('name');
+    const phoneEl = document.getElementById('phone');
+    const btn = document.getElementById('submitBtn');
+    const name = nameEl.value.trim();
+    const phone = phoneEl.value.trim();
 
-    <section class="cta" id="details">
-      <h2>Хочеш на Канари <span>в листопаді?</span></h2>
-      <p>Залиш контакти — підберемо найзручніший виліт і каюту під твій бюджет.</p>
-      <div class="lead-card">
-        <h3>Підібрати варіант</h3>
-        <p>Менеджер ТурБонжур звʼяжеться з тобою та надішле деталі.</p>
-        <div id="formBlock">
-          <div class="fields">
-            <input id="name" type="text" placeholder="Імʼя" autocomplete="name" />
-            <input id="phone" type="tel" placeholder="Телефон" autocomplete="tel" />
-          </div>
-          <button onclick="sendLead()">ПІДІБРАТИ ВАРІАНТ</button>
-          <div class="privacy">Ми не передаємо ваші дані третім особам</div>
-        </div>
-        <div class="success-msg" id="successMsg">
-          <div class="icon">🎉</div>
-          <h3>Заявку прийнято!</h3>
-          <p>Менеджер ТурБонжур звʼяжеться з вами найближчим часом.</p>
-        </div>
-      </div>
-    </section>
-  </main>
+    nameEl.classList.remove('error');
+    phoneEl.classList.remove('error');
 
-  <div class="sticky-cta">
-    <b>Канари + Мадейра<br>22–29 листопада</b>
-    <a href="#details">Залишити заявку</a>
-  </div>
+    if (!name) { nameEl.classList.add('error'); nameEl.focus(); return; }
+    if (!phone || phone.replace(/\D/g, '').length < 7) { phoneEl.classList.add('error'); phoneEl.focus(); return; }
 
-  <script>
-    // Ініціалізація Telegram WebApp — один раз
-    const tg = window.Telegram?.WebApp;
-    if (tg) {
-      tg.ready();
-      tg.expand();
-    }
+    btn.disabled = true;
+    btn.textContent = 'Відправляємо...';
 
-    // Автозаповнення імені з Telegram
-    if (tg?.initDataUnsafe?.user) {
-      const u = tg.initDataUnsafe.user;
-      const fullName = [u.first_name, u.last_name].filter(Boolean).join(' ');
-      if (fullName) document.getElementById('name').value = fullName;
-    }
+    const BOT_TOKEN = '8772901246:AAGUllaiGBUwlxMMIF9JkKIiMOcXR4rOaws';
+    const CHAT_ID = '-1001221667561';
 
-    function sendLead() {
-      const nameEl = document.getElementById('name');
-      const phoneEl = document.getElementById('phone');
-      const name = nameEl.value.trim();
-      const phone = phoneEl.value.trim();
+    const text =
+      '🔥 *НОВИЙ ЛІД — КРУЇЗ*\n\n' +
+      '👤 Імʼя: ' + name + '\n' +
+      '📞 Телефон: ' + phone + '\n\n' +
+      '🚢 Тур: 4 Канарські острови + Мадейра · Costa Smeralda\n' +
+      '📅 Дати: 22–29 листопада 2026\n' +
+      '📍 Джерело: Mini App (GitHub Pages)';
 
-      nameEl.classList.remove('error');
-      phoneEl.classList.remove('error');
-
-      if (!name) { nameEl.classList.add('error'); nameEl.focus(); return; }
-      if (!phone || phone.replace(/\D/g,'').length < 7) { phoneEl.classList.add('error'); phoneEl.focus(); return; }
-
-      const data = JSON.stringify({
-        type: 'cruise_lead',
-        cruise: '4 Канарські острови + Мадейра · Costa Smeralda',
-        dates: '22–29 листопада 2026',
-        name: name,
-        phone: phone,
-        source: 'Mini App'
-      });
-
-      if (tg?.sendData) {
-        tg.sendData(data);
-        setTimeout(() => tg.close(), 300);
-      } else {
-        // Fallback для тестування поза Telegram
+    fetch('https://api.telegram.org/bot' + BOT_TOKEN + '/sendMessage', {
+      method: 'POST',
+      headers: { 'Content-Type': 'application/json' },
+      body: JSON.stringify({
+        chat_id: CHAT_ID,
+        text: text,
+        parse_mode: 'Markdown'
+      })
+    })
+    .then(function(res) { return res.json(); })
+    .then(function(data) {
+      if (data.ok) {
         document.getElementById('formBlock').style.display = 'none';
         document.getElementById('successMsg').style.display = 'block';
+        if (tg) setTimeout(function() { tg.close(); }, 2500);
+      } else {
+        btn.disabled = false;
+        btn.textContent = 'ПІДІБРАТИ ВАРІАНТ';
+        alert('Помилка відправки. Спробуй ще раз.');
       }
-    }
-  </script>
+    })
+    .catch(function() {
+      btn.disabled = false;
+      btn.textContent = 'ПІДІБРАТИ ВАРІАНТ';
+      alert('Помилка мережі. Перевір підключення.');
+    });
+  }
+</script>
 </body>
 </html>
