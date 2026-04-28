@@ -14,49 +14,25 @@
       --muted: #617083;
       --line: #d9e6f3;
       --green: #16845f;
-      --red: #d93255; 
+      --red: #d93255;
     }
     * { box-sizing: border-box; }
     body { margin: 0; font-family: Arial, Helvetica, sans-serif; color: var(--text); }
     .app { max-width: 430px; margin: 0 auto; background: #fff; min-height: 100vh; overflow: hidden; box-shadow: 0 0 30px rgba(0,0,0,.08); padding-bottom: 80px; }
 
-    .hero {
-  position: relative;
-  min-height: 565px;
-  padding: 0 15px 16px;
-  color: #06223f;
-
-  background:
-    linear-gradient(
-      180deg,
-      rgba(255,255,255,0.85) 0%,
-      rgba(255,255,255,0.55) 35%,
-      rgba(255,255,255,0.2) 60%,
-      rgba(255,255,255,0) 100%
-    ),
-    url('liner.jpg') center/cover no-repeat;
-
-  border-radius: 0 0 26px 26px;
-}
+    .hero { position: relative; min-height: 565px; padding: 0 15px 16px; color: #06223f; background: linear-gradient(180deg, rgba(255,255,255,0.85) 0%, rgba(255,255,255,0.55) 35%, rgba(255,255,255,0.18) 58%, rgba(255,255,255,0) 100%), url('liner.jpg') center/cover no-repeat; border-radius: 0 0 26px 26px; }
     .logo { width: 205px; margin: 0 auto; background: linear-gradient(180deg, #ffd54b, var(--accent)); border-radius: 0 0 24px 24px; text-align: center; padding: 10px 0 12px; font-size: 25px; line-height: .9; font-weight: 900; letter-spacing: -.6px; color: #06223f; }
     .logo span { color: #e53120; }
     .logo small { display: block; margin-top: 7px; font-size: 10px; letter-spacing: 4px; color: #fff; font-weight: 700; }
     .hero-content { padding: 18px 0 0; }
-    h1 { 
-  margin: 0 0 10px; 
-  font-size: 38px; 
-  line-height: .98; 
-  letter-spacing: -1px; 
-  text-transform: uppercase;
-  text-shadow: 0 2px 8px rgba(255,255,255,0.45);
-}
+    h1 { margin: 0 0 10px; font-size: 38px; line-height: .98; letter-spacing: -1px; text-transform: uppercase; }
     h1 .yellow { color: var(--accent); }
     .subtitle { display: inline-block; font-size: 17px; font-weight: 900; padding-bottom: 5px; border-bottom: 4px solid var(--accent); margin-bottom: 18px; }
     .offer { display: block; background: linear-gradient(180deg, #ffcd31, var(--accent)); border-radius: 14px; padding: 13px 14px; color: var(--blue); font-size: 21px; line-height: 1.18; font-weight: 900; margin-bottom: 280px; }
     .top-features { position: absolute; left: 18px; right: 18px; bottom: 126px; display: grid; grid-template-columns: 1fr 1px 1fr 1px 1fr; align-items: center; gap: 10px; text-align: center; }
     .top-feature { min-height: 105px; display: grid; align-content: start; justify-items: center; gap: 7px; }
     .top-feature .icon { font-size: 34px; }
-    .top-feature p { margin: 0; font-size: 12.5px; line-height: 1.16; font-weight: 900; color: var(--blue); text-shadow: 0 1px 0 rgba(255,255,255,.45); }
+    .top-feature p { margin: 0; font-size: 12.5px; line-height: 1.16; font-weight: 900; color: var(--blue); text-shadow: 0 1px 2px rgba(255,255,255,.6); }
     .vertical-line { width: 1px; height: 88px; background: rgba(6,55,99,.42); }
     .hero-bottom-card { position: absolute; left: 16px; right: 16px; bottom: 22px; display: grid; grid-template-columns: 1fr 1px 1.05fr; align-items: center; gap: 12px; background: rgba(255,255,255,.96); border-radius: 24px; padding: 14px; box-shadow: 0 20px 45px rgba(0,0,0,.2); }
     .bottom-item { display: flex; align-items: center; gap: 10px; }
@@ -143,7 +119,7 @@
     <div class="hero-content">
       <h1>Атлантика. Вулкани.<br><span class="yellow">Вічне літо.</span></h1>
       <div class="subtitle">І ти — в центрі всього дійства</div>
-      <div class="offer">Круїз 4 Канарські острови + Мадейра <span style="color:#063763;font-size:17px;font-weight:700;">
+      <div class="offer">Круїз 4 Канарських острови + Мадейра</div>
     </div>
     <div class="top-features">
       <div class="top-feature">
@@ -164,7 +140,7 @@
     <div class="hero-bottom-card">
       <div class="bottom-item">
         <div class="bottom-icon">✈️</div>
-        <b>Вильоти з будь-якого міста Європи</b>
+        <b>Вильоти з будь якого міста Європи</b>
       </div>
       <div class="bottom-divider"></div>
       <div class="bottom-item date">
@@ -212,7 +188,7 @@
   <section class="section">
     <h2 class="section-title">Чому цей круїз особливий?</h2>
     <div class="features">
-      <div class="feature"><div class="icon">🌴</div><b>4 Канарських острови + Мадейра</b><p>Найкраще в Атлантиці в одному маршруті</p></div>
+      <div class="feature"><div class="icon">🌴</div><b>4 острови + Мадейра</b><p>Найкраще в Атлантиці в одному маршруті</p></div>
       <div class="feature"><div class="icon">🌋</div><b>Вулкани, пляжі, природа</b><p>Неймовірні пейзажі щодня</p></div>
       <div class="feature"><div class="icon">☀️</div><b>Вічне літо в листопаді</b><p>Сонце та океан</p></div>
       <div class="feature"><div class="icon">👥</div><b>Група однодумців</b><p>Подорожуй у компанії цікавих людей</p></div>
@@ -263,19 +239,19 @@
       <table>
         <thead><tr><th>Виліт</th><th>Внутрішня</th><th>Вікно</th><th>Балкон</th></tr></thead>
         <tbody>
-          <tr><td><b>Без авіа</b></td><td><b>1 098 €</b></td><td><b>1 358 €</b></td><td><b>1 498 €</b></td></tr>
+          <tr><td><b>Без авіа</b></td><td><b>1 039 €</b></td><td><b>1 239 €</b></td><td><b>1 399 €</b></td></tr>
           <tr><td colspan="4" style="text-align:center;font-weight:700;background:#f5f9ff;color:#063763;">Круїз + Авіа</td></tr>
-          <tr><td>🇮🇪 Дублін</td><td>1 455 €</td><td>1 715 €</td><td>1 855 €</td></tr>
-          <tr><td>🇵🇱 Катовіце</td><td>1 574 €</td><td>1 834 €</td><td>1 974 €</td></tr>
-          <tr><td>🇲🇩 Кишинів</td><td>1 728 €</td><td>1 988 €</td><td>2 128 €</td></tr>
-          <tr><td>🇩🇪 Берлін</td><td>1 709 €</td><td>1 969 €</td><td>2 109 €</td></tr>
-          <tr><td>🇩🇪 Франкфурт</td><td>1 527 €</td><td>1 787 €</td><td>1 927 €</td></tr>
-          <tr><td>🇭🇺 Будапешт</td><td>1 499 €</td><td>1 759 €</td><td>1 899 €</td></tr>
-          <tr><td>🇫🇷 Париж</td><td>1 403 €</td><td>1 663 €</td><td>1 803 €</td></tr>
-          <tr><td>🇪🇸 Мадрид</td><td>1 328 €</td><td>1 588 €</td><td>1 728 €</td></tr>
-          <tr><td>🇪🇸 Валенсія</td><td>1 321 €</td><td>1 581 €</td><td>1 721 €</td></tr>
-          <tr><td>🇬🇧 Лондон</td><td>1 317 €</td><td>1 577 €</td><td>1 717 €</td></tr>
-          <tr><td>🇮🇹 Мілан</td><td>1 437 €</td><td>1 697 €</td><td>1 837 €</td></tr>
+          <tr><td>🇮🇪 Дублін</td><td>1 396 €</td><td>1 596 €</td><td>1 756 €</td></tr>
+          <tr><td>🇵🇱 Катовіце</td><td>1 515 €</td><td>1 715 €</td><td>1 875 €</td></tr>
+          <tr><td>🇲🇩 Кишинів</td><td>1 669 €</td><td>1 869 €</td><td>2 029 €</td></tr>
+          <tr><td>🇩🇪 Берлін</td><td>1 650 €</td><td>1 850 €</td><td>2 010 €</td></tr>
+          <tr><td>🇩🇪 Франкфурт</td><td>1 468 €</td><td>1 668 €</td><td>1 828 €</td></tr>
+          <tr><td>🇭🇺 Будапешт</td><td>1 440 €</td><td>1 640 €</td><td>1 800 €</td></tr>
+          <tr><td>🇫🇷 Париж</td><td>1 344 €</td><td>1 544 €</td><td>1 704 €</td></tr>
+          <tr><td>🇪🇸 Мадрид</td><td>1 269 €</td><td>1 469 €</td><td>1 629 €</td></tr>
+          <tr><td>🇪🇸 Валенсія</td><td>1 262 €</td><td>1 462 €</td><td>1 622 €</td></tr>
+          <tr><td>🇬🇧 Лондон</td><td>1 258 €</td><td>1 458 €</td><td>1 618 €</td></tr>
+          <tr><td>🇮🇹 Мілан</td><td>1 378 €</td><td>1 578 €</td><td>1 738 €</td></tr>
         </tbody>
       </table>
     </div>
