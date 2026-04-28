@@ -358,31 +358,57 @@
       '📅 Дати: 22–29 листопада 2026\n' +
       '📍 Джерело: Mini App (GitHub Pages)';
 
-    fetch('https://api.telegram.org/bot' + BOT_TOKEN + '/sendMessage', {
+    // Спробуємо прямий запит, якщо не вийде — через проксі
+    var apiUrl = 'https://api.telegram.org/bot' + BOT_TOKEN + '/sendMessage';
+    var body = JSON.stringify({ chat_id: CHAT_ID, text: text, parse_mode: 'Markdown' });
+
+    function showSuccess() {
+      document.getElementById('formBlock').style.display = 'none';
+      document.getElementById('successMsg').style.display = 'block';
+      if (tg) setTimeout(function() { tg.close(); }, 2500);
+    }
+
+    function showError() {
+      btn.disabled = false;
+      btn.textContent = 'ПІДІБРАТИ ВАРІАНТ';
+      alert('Помилка відправки. Спробуй ще раз.');
+    }
+
+    // Спочатку пробуємо напряму
+    fetch(apiUrl, {
       method: 'POST',
       headers: { 'Content-Type': 'application/json' },
-      body: JSON.stringify({
-        chat_id: CHAT_ID,
-        text: text,
-        parse_mode: 'Markdown'
-      })
+      body: body
     })
     .then(function(res) { return res.json(); })
     .then(function(data) {
       if (data.ok) {
-        document.getElementById('formBlock').style.display = 'none';
-        document.getElementById('successMsg').style.display = 'block';
-        if (tg) setTimeout(function() { tg.close(); }, 2500);
+        showSuccess();
       } else {
-        btn.disabled = false;
-        btn.textContent = 'ПІДІБРАТИ ВАРІАНТ';
-        alert('Помилка відправки. Спробуй ще раз.');
+        // Пробуємо через проксі
+        return fetch('https://corsproxy.io/?' + encodeURIComponent(apiUrl), {
+          method: 'POST',
+          headers: { 'Content-Type': 'application/json' },
+          body: body
+        })
+        .then(function(res) { return res.json(); })
+        .then(function(d) {
+          if (d.ok) { showSuccess(); } else { showError(); }
+        });
       }
     })
     .catch(function() {
-      btn.disabled = false;
-      btn.textContent = 'ПІДІБРАТИ ВАРІАНТ';
-      alert('Помилка мережі. Перевір підключення.');
+      // Прямий не спрацював — пробуємо через проксі
+      fetch('https://corsproxy.io/?' + encodeURIComponent(apiUrl), {
+        method: 'POST',
+        headers: { 'Content-Type': 'application/json' },
+        body: body
+      })
+      .then(function(res) { return res.json(); })
+      .then(function(data) {
+        if (data.ok) { showSuccess(); } else { showError(); }
+      })
+      .catch(function() { showError(); });
     });
   }
 </script>
