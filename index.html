@@ -347,9 +347,6 @@
     btn.disabled = true;
     btn.textContent = 'Відправляємо...';
 
-    const BOT_TOKEN = '8772901246:AAGUllaiGBUwlxMMIF9JkKIiMOcXR4rOaws';
-    const CHAT_ID = '-1001221667561';
-
     const text =
       '🔥 *НОВИЙ ЛІД — КРУЇЗ*\n\n' +
       '👤 Імʼя: ' + name + '\n' +
@@ -359,9 +356,6 @@
       '📍 Джерело: Mini App (GitHub Pages)';
 
     // Спробуємо прямий запит, якщо не вийде — через проксі
-    var apiUrl = 'https://api.telegram.org/bot' + BOT_TOKEN + '/sendMessage';
-    var body = JSON.stringify({ chat_id: CHAT_ID, text: text, parse_mode: 'Markdown' });
-
     function showSuccess() {
       document.getElementById('formBlock').style.display = 'none';
       document.getElementById('successMsg').style.display = 'block';
@@ -374,42 +368,17 @@
       alert('Помилка відправки. Спробуй ще раз.');
     }
 
-    // Спочатку пробуємо напряму
-    fetch(apiUrl, {
+    // Відправка через Railway сервер
+    fetch('https://cruise-mini-app-production.up.railway.app/lead', {
       method: 'POST',
       headers: { 'Content-Type': 'application/json' },
-      body: body
+      body: JSON.stringify({ name: name, phone: phone })
     })
     .then(function(res) { return res.json(); })
     .then(function(data) {
-      if (data.ok) {
-        showSuccess();
-      } else {
-        // Пробуємо через проксі
-        return fetch('https://corsproxy.io/?' + encodeURIComponent(apiUrl), {
-          method: 'POST',
-          headers: { 'Content-Type': 'application/json' },
-          body: body
-        })
-        .then(function(res) { return res.json(); })
-        .then(function(d) {
-          if (d.ok) { showSuccess(); } else { showError(); }
-        });
-      }
+      if (data.ok) { showSuccess(); } else { showError(); }
     })
-    .catch(function() {
-      // Прямий не спрацював — пробуємо через проксі
-      fetch('https://corsproxy.io/?' + encodeURIComponent(apiUrl), {
-        method: 'POST',
-        headers: { 'Content-Type': 'application/json' },
-        body: body
-      })
-      .then(function(res) { return res.json(); })
-      .then(function(data) {
-        if (data.ok) { showSuccess(); } else { showError(); }
-      })
-      .catch(function() { showError(); });
-    });
+    .catch(function() { showError(); });
   }
 </script>
 </body>
